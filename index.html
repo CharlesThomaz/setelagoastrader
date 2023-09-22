@@ -115,7 +115,7 @@
     </header>
     
         <nav>
-            <button><a href="#">Entenda o nosso projeto</a></button>
+            <button><a href="#nossoprojeto">Entenda o nosso projeto</a></button>
             <button><a href="https://youtube.com/@setelagoastrader" target="_blank">Conheça nosso canal</a></button>
             <button><a href="https://www.instagram.com/setelagoastrader/" target="_blank">Siga nosso instagram</a></button>
         </nav>
@@ -127,7 +127,7 @@
                 
                 <p><strong>Seja muito bem-vindo ao Sete Lagoas Trader</strong>, o site que em breve se tornará a sua referência em informações, análises e recursos no mundo dos investimentos e finanças. Estamos trabalhando duro para trazer a você uma plataforma completa e confiável que o ajudará a compreender e conquistar o mercado financeiro.</p>
                 
-                <article>
+                <article id="nossoprojeto">
                     <h4>O que estamos preparando para você?</h4>
                     
                     <ul>
@@ -156,6 +156,17 @@
             <footer>
                 <p>Site criado por Charles Thomaz para o setelagoastrader</p>  
             </footer>
+            <script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
             
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            </script>            
 </body>
+
 </html>
